@@ -10,5 +10,9 @@ function newDate(date,month){
     return date;
 }
 newDate(date,month);
-let day=date.getDay();
-console.log(`Three months from today is ${date.toLocaleString('en-US')}}`);
+
+const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+let day = days[date.getDay()];
+
+console.log(`Three months from today is ${date.toLocaleString('en-US')}} and ${day}`);

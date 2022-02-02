@@ -23,8 +23,8 @@ const obj={
     a:1,
     b:2
 }
-console.log(detect_data_type(true));
-console.log(detect_data_type(15.4));
-console.log(detect_data_type("INFODEV"));
-console.log(detect_data_type(func));
-console.log(detect_data_type(obj));
+console.log(dataType(true));
+console.log(dataType(15.4));
+console.log(dataType("INFODEV"));
+console.log(dataType(func));
+console.log(dataType(obj));

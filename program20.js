@@ -1,7 +1,16 @@
 /* const prompt=require('prompt-sync')();
-var funcName= Number(prompt("Enter function name: ")); */
+var funcName= Number(prompt("Enter function name: "));
 
-function funcName(){
-    return this.getName;
+var func = new Function("return function"+ funcName +"(){ }")();
+
+func();
+
+
+
+ */
+
+
+function hello(){
+    return this.ca.name;
 }
-console.log(funcName());
+console.log(hello());

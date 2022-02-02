@@ -20,8 +20,8 @@
             <label for="secondNumber">Second Number: </label>
             <input type='text' id="secondNumber" class="input">
             <br><br>
-            <button id="Multiply" class="btn" onclick="multiply()">Multiply</button>
-            <button id="Divide" class="btn" onclick="divide()">Divide</button>
+            <input type="button" id="Multiply" class="btn" onclick="multiply()" value="Multiply">
+            <input type="button" id="Divide" class="btn" onclick="divide()" value="Divide">
         </form>
         <p>The Result is : <br>
             <span id="result"></span>
@@ -32,12 +32,16 @@
             num1 = document.getElementById("firstNumber").value;
             num2 = document.getElementById("secondNumber").value;
             document.getElementById("result").innerHTML = num1 * num2;
+            document.getElementById("firstNumber").value="";
+            document.getElementById("secondNumber").value="";
         }
 
         function divide() {
             num1 = document.getElementById("firstNumber").value;
             num2 = document.getElementById("secondNumber").value;
             document.getElementById("result").innerHTML = num1 / num2;
+            document.getElementById("firstNumber").value="";
+            document.getElementById("secondNumber").value="";
         }
 
     </script>

@@ -46,3 +46,5 @@ function monthName(monthVal){
 
 monthName(monthVal);
 console.log(`It's ${month}!`);
+
+//OR we can do it by storing name of months in array.

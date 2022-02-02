@@ -1,17 +1,11 @@
+let output2= stringArray.join("").toUpperCase();
+console.log(output2);
 
-let dob = prompt("Enter your DOB in YYYY/MM/DD format");
-
-function calcAge(dateOfBirth){
-    
-    let currentDate = new Date();
-    let birthDate = new Date(dateOfBirth);
-    let age = currentDate.getFullYear() - birthDate.getFullYear();
-    let m = currentDate.getMonth() - birthDate.getMonth();
-    if (m < 0) {
-        age--;
-    }
-    return age;
+console.log(stringArray[0]);
+var output=[];
+for (var i=0;i<stringArray.length;i++){
+    output[i]=stringArray[i].charAt(0).toUpperCase()+stringArray[i].slice(1);
 }
-
-
-console.log(`Your current age is: ${calcAge(dob)}`);
+let output3=output.join(" ");
+console.log(output3);
+console.log(stringArray);
