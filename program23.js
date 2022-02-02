@@ -20,6 +20,7 @@ Array.shift();
 console.log(Array);
 
 //Using unshift method to add new value to first index of array
-console.log(`100 will be added to the first position of shifted array [${Array}]`); 
-Array.unshift("100");
+//console.log(`100 will be added to the first position of shifted array [${Array}]`);
+var itemtoADD=prompt("Enter item to add: ")
+Array.unshift(itemtoADD);
 console.log(Array);

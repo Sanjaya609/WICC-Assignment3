@@ -9,19 +9,16 @@ for(i=0;i<arraySize;i++){
 
 var choice= prompt("You want to enter index? (Y/N): ");
 
-//console.log(choice.toUpperCase());
 var items;
 if(choice.toUpperCase()==='Y'){
-    items= prompt("Enter the index from which you want to see elements: ");
-}else{
-    items=arraySize;
-}
-
-function lastElement(n){
-    if (n){
+    items= prompt("Enter number of last elements you want to see:  ");
+    function lastElement(n){
         return Array.slice(-n);
-    }else{
-        return Array[arraySize];
-    }
-}   
-console.log(lastElement(items,arraySize));
+    }   
+    console.log(lastElement(items,Array));
+}else{ 
+ console.log(Array[Array.length-1]);
+}
+ 
+
+

@@ -1,19 +1,17 @@
 const prompt=require('prompt-sync')();
-console.log("Enter your date of birth in YYYY/MM/DD format: ");
-var Year= prompt("Year: ");
-var Month= prompt("Month: ");
-var Day= prompt("Day: ");
+let DOB= prompt("Enter your DOB in YYYY/MM/DD format: ");
 
+//console.log(date);
 
-
-var DOB= new Date(Year,Month,Day);
-
-function calculate_age(DOB) { 
-    var currentDate= new Date();
-    var diff_ms = Date.now() - DOB.getTime();
-    var age_dt = new Date(diff_ms); 
-  
-    return Math.abs(age_dt.getUTCFullYear() - 1970);
+function Age(DOB){
+    let date= new Date(DOB);
+    let currentDate= new Date();
+    let age= currentDate.getFullYear() - date.getFullYear();
+    let i= currentDate.getMonth()-date.getMonth();
+    if(i<0){
+        age--;
+    }
+    return age;
 }
-
-console.log(calculate_age(new Date(1962, 1, 1)));
+let age= Age(DOB);
+console.log(`You're ${age} years old`);
