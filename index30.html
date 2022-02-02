@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <section class="calculator">
+        <form>
+            <label for="firstNumber">First Number: </label>
+            <input type='text' id="firstNumber" class="input">
+            <br><br>
+            <label for="secondNumber">Second Number: </label>
+            <input type='text' id="secondNumber" class="input">
+            <br><br>
+            <button id="Multiply" class="btn" onclick="multiply()">Multiply</button>
+            <button id="Divide" class="btn" onclick="divide()">Divide</button>
+        </form>
+        <p>The Result is : <br>
+            <span id="result"></span>
+    </section>
+
+    <script>
+        function multiply() {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+
+        function divide() {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 / num2;
+        }
+
+    </script>
+</body>
+
+</html>
